@@ -1,1 +1,29 @@
-# Vegas-app
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegas Hub</title>
+    <style>
+        body { background: #1a1a1a; color: #fff; font-family: sans-serif; margin: 0; padding: 20px; }
+        .balance { font-size: 24px; font-weight: bold; text-align: center; margin-bottom: 20px; color: #ffcc00; }
+        .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+        .cell { background: #333; height: 60px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .btn { background: #007bff; color: white; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="balance">Баланс: 0.00 ⭐</div>
+    <div class="grid" id="grid"></div>
+    <div class="btn" onclick="alert('Ставка принята!')">Сделать ставку</div>
+    <script>
+        const grid = document.getElementById('grid');
+        for(let i=0; i<25; i++) {
+            let div = document.createElement('div');
+            div.className = 'cell';
+            div.innerText = '⭐';
+            grid.appendChild(div);
+        }
+    </script>
+</body>
+</html>
